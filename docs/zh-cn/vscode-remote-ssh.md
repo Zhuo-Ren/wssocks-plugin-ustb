@@ -22,6 +22,13 @@
     ProxyCommand connect -S 127.0.0.1:1080 %h %p
     # ProxyCommand "C:/Program Files/Git/mingw64/bin/connect.exe" -S 127.0.0.1:1080 %h %p  # Windows full connect path
    ```
+   我的就是
+   ```
+   Host 202.204.62.204
+    HostName 202.204.62.204
+    User xuyang
+    ProxyCommand "C:/ProgramFiles/Git/mingw64/bin/connect.exe" -S 127.0.0.1:1080 %h %p
+   ```
    其中，windows 和 macOS/Linux 的 ProxyCommand 配置有所区别，且 windows 上需要安装 git bash 环境才会有 "connect" 命令。
 
    !> 建议 windows 用户 connect.exe 的路径用完整的绝对路径，因为直接用 `connect -S 127.0.0.1:1080 %h %p` 在部分 windows 上可能会出现连接失败的问题。
